@@ -1,0 +1,53 @@
+:root {
+  --color-text: #242424;
+  --font-family-base: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+  --font-family-heading: 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --color-main: #CB04A5;
+  --color-secondary: #F433AB;
+  --content-max-width: 680px;
+  --milligram-gray: #606c76; /* The gray used by milligram for hover styles and such */
+}
+
+/* --- Adjust milligram defaults --- **/
+
+body {
+  font-family: var(--font-family-base);
+  font-size: 2em;
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: var(--font-family-heading);
+}
+
+/* --- Extend milligram classes --- */
+
+.button, .button.button-outline {
+  color: var(--color-main);
+  border-color: var(--color-main);
+  text-decoration-color: var(--color-main);
+  font-family: var(--font-family-heading);
+}
+
+/* --- Custom utility classes --- */
+
+.excerpt-text {
+  color: var(--milligram-gray);
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 24px;
+  word-break: break-word;
+}
+
+.monospace {
+  font-family: monospace;
+}
