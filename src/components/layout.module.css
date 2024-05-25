@@ -1,7 +1,45 @@
+:root {
+  --footer-height: 300px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.navigationItems {
+  position: relative;
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 24px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigationItems h4 {
+  font-weight: normal;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .navigationItems h4 {
+    display: none;
+  }
+}
+
+.navigationItems a {
+  padding: 0 2rem;
+}
+
 .contentContainer {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+  min-height: calc(100vh - var(--footer-height));
 }
 
 .content {
@@ -12,16 +50,18 @@
 }
 
 .footer {
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   background-color: var(--milligram-gray);
+  height: var(--footer-height);
 }
 
 .footerContent {
+  font-size: 0.9em;
   max-width: var(--content-max-width);
   width: 100%;
-  margin: 0 24px;
+  margin: 2rem 24px;
   padding: 3rem 0;
   color: white;
 }

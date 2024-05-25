@@ -6,6 +6,13 @@
   --color-secondary: #F433AB;
   --content-max-width: 680px;
   --milligram-gray: #606c76; /* The gray used by milligram for hover styles and such */
+
+  /* --screenw-xs: 0;
+  --screenw-sm: 576px;
+  --screenw-md: 768px;
+  --screenw-lg: 992px;
+  --screenw-xl: 1200px;
+  --screenw-xxl: 1400px; */
 }
 
 /* --- Adjust milligram defaults --- **/
@@ -15,6 +22,10 @@ body {
   font-size: 2em;
   color: var(--color-text);
   margin: 0;
+}
+
+h1 {
+  font-size: 4.2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +40,69 @@ a {
 a:hover, a:focus {
   color: var(--color-secondary);
 }
+
+/* --- Media queries --- */
+
+/* Large screen */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.9em;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 2.6rem;
+  }
+  
+  h5 {
+    font-size: 2.2rem;
+  }
+
+  h6 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small screen */
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 1.8em;
+  }  
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+  
+  h5, h6 {
+    font-size: 1.8rem;
+  }
+}
+
 
 /* --- Extend milligram classes --- */
 
@@ -46,11 +120,13 @@ a:hover, a:focus {
 }
 
 /* --- Custom utility classes --- */
-
-.excerpt-text {
-  color: var(--milligram-gray);
-}
-
 .monospace {
   font-family: monospace;
+}
+
+.text-minor {
+  font-size: .9em;
+  font-style: italic;
+  color: var(--milligram-gray);
+  margin-bottom: .5rem;
 }

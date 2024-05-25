@@ -21,7 +21,7 @@ const config: GatsbyConfig = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 1200 // todo
+              maxWidth: 680
             }
           },
           "gatsby-remark-autolink-headers",

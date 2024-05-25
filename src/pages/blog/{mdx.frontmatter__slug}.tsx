@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import type { HeadFC, PageProps } from "gatsby"
 import Seo from "../../components/seo"
 import Layout from "../../components/layout"
+import Feed from "../../components/feed"
 
 interface DataProps {
   mdx: {
@@ -11,15 +12,18 @@ interface DataProps {
       date: string;
     }
     excerpt: string;
+    id: string;
   }
 }
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data, children }) => {
   return (
     <Layout>
-      <Link to={'/'} className="button button-outline button-main">back to all posts</Link><br/>
-      <span>{data.mdx.frontmatter.date}</span>
+      <p className="text-minor">Posted on {data.mdx.frontmatter.date}</p>
       {children}
+      <br/><hr/>
+      <h2><span className="monospace">//</span> Other recent posts</h2>
+      <Feed hidePostId={data.mdx.id} postCount={3}/>
     </Layout>
   )
 }
@@ -32,6 +36,7 @@ export const query = graphql`
         date(formatString: "MMMM D, YYYY")
       }
       excerpt
+      id
     }
   }
 `
