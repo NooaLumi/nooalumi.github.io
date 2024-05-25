@@ -14,6 +14,7 @@ body {
   font-family: var(--font-family-base);
   font-size: 2em;
   color: var(--color-text);
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,31 +22,33 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
 }
 
+a {
+  color: var(--color-main);
+}
+
+a:hover, a:focus {
+  color: var(--color-secondary);
+}
+
 /* --- Extend milligram classes --- */
 
-.button, .button.button-outline {
+.button.button-main {
   color: var(--color-main);
   border-color: var(--color-main);
   text-decoration-color: var(--color-main);
   font-family: var(--font-family-heading);
 }
 
+.button.button-main:hover, .button.button-main:focus {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  text-decoration-color: var(--color-secondary);
+}
+
 /* --- Custom utility classes --- */
 
 .excerpt-text {
   color: var(--milligram-gray);
-}
-
-.content-container {
-  display: flex;
-  justify-content: center;
-}
-
-.content {
-  max-width: var(--content-max-width);
-  width: 100%;
-  margin: 0 24px;
-  word-break: break-word;
 }
 
 .monospace {

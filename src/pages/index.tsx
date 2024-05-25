@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import type { HeadFC, PageProps } from "gatsby"
+import Seo from "../components/seo"
+import Layout from "../components/layout"
 
 interface DataProps {
   allMdx: {
@@ -18,24 +20,22 @@ interface DataProps {
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   return (
-    <main className="content-container">
-      <div className="content">
-        <h1><span className="monospace">//</span> Blog Posts</h1>
-        {
-          data.allMdx.nodes.map(node => (
-            <article>
-              <h2>
-                <Link to={`/blog/${node.frontmatter.slug}`}>
-                  {node.frontmatter.title}
-                </Link>
-              </h2>
-              <p className="excerpt-text">{node.excerpt}</p>
-              <p>Posted: {node.frontmatter.date}</p>
-            </article>
-          ))
-        }
-      </div>
-    </main>
+    <Layout>
+      <h1><span className="monospace">//</span> Blog Posts</h1>
+      {
+        data.allMdx.nodes.map(node => (
+          <article>
+            <h2>
+              <Link to={`/blog/${node.frontmatter.slug}`}>
+                {node.frontmatter.title}
+              </Link>
+            </h2>
+            <p className="excerpt-text">{node.excerpt}</p>
+            <p>Posted: {node.frontmatter.date}</p>
+          </article>
+        ))
+      }
+    </Layout>
   )
 }
 
@@ -55,6 +55,6 @@ export const query = graphql`
   }
 `
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <Seo title="Nooa's Homepage" description="The homepage of Nooa Lumilaakso"/>
 
 export default IndexPage

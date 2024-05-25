@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import type { HeadFC, PageProps } from "gatsby"
+import Seo from "../../components/seo"
+import Layout from "../../components/layout"
 
 interface DataProps {
   mdx: {
@@ -8,18 +10,17 @@ interface DataProps {
       title: string;
       date: string;
     }
+    excerpt: string;
   }
 }
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data, children }) => {
   return (
-    <main className="content-container">
-      <div className="content">
-        <Link to={'/'} className="button button-outline">back to all posts</Link><br/>
-        <span>{data.mdx.frontmatter.date}</span>
-        {children}
-      </div>
-    </main>
+    <Layout>
+      <Link to={'/'} className="button button-outline button-main">back to all posts</Link><br/>
+      <span>{data.mdx.frontmatter.date}</span>
+      {children}
+    </Layout>
   )
 }
 
@@ -30,10 +31,11 @@ export const query = graphql`
         title
         date(formatString: "MMMM D, YYYY")
       }
+      excerpt
     }
   }
 `
 
-export const Head: HeadFC<DataProps> = ({ data }) => <title>{data.mdx.frontmatter.title}</title>
+export const Head: HeadFC<DataProps> = ({ data }) => <Seo title={`${data.mdx.frontmatter.title} | Nooa's Blog`} description={data.mdx.excerpt} />
 
 export default IndexPage

@@ -1,0 +1,35 @@
+.contentContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 24px;
+  word-break: break-word;
+}
+
+.footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--milligram-gray);
+}
+
+.footerContent {
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 24px;
+  padding: 3rem 0;
+  color: white;
+}
+
+.footerContent a {
+  color: white;
+}
+
+.footerContent a:hover {
+  color: var(--color-secondary);
+}
