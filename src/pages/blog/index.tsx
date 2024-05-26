@@ -13,6 +13,6 @@ const BlogPage: React.FC<PageProps> = () => {
   )
 }
 
-export const Head: HeadFC = () => <Seo title="Nooa's Homepage" description="The homepage of Nooa Lumilaakso"/>
+export const Head: HeadFC = () => <Seo title="Nooa's Blog" description="The blog of Nooa Lumilaakso"/>
 
 export default BlogPage
