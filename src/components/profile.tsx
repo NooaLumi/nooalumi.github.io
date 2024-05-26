@@ -13,6 +13,7 @@ const Profile: React.FC = () => {
         <ul className={styles.socialIcons}>
           <li><SocialIcon className={styles.socialIcon} url="https://www.linkedin.com/in/nooa-lumilaakso-212581243/"/></li>
           <li><SocialIcon className={styles.socialIcon} url="https://github.com/NooaLumi"/></li>
+          <li><SocialIcon className={styles.socialIcon} url="https://discord.com/users/warmsnow_"/></li>
         </ul>
       </div>
     </div>
