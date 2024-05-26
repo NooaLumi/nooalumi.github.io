@@ -18,15 +18,17 @@
   justify-content: flex-end;
 }
 
-.navigationItems h4 {
+.heading {
   font-weight: normal;
   position: absolute;
   left: 0;
   top: 0;
+  font-size: 1.1em;
+  font-family: var(--font-family-heading);
 }
 
 @media screen and (max-width: 576px) {
-  .navigationItems h4 {
+  .heading {
     display: none;
   }
 }

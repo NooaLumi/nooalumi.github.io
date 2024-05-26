@@ -7,8 +7,22 @@ interface FeedProps {
   hidePostId?: string;
 }
 
+interface QueryResult {
+  allMdx: {
+    nodes: {
+      frontmatter: {
+        date: string;
+        title: string;
+        slug: string;
+      }
+      id: string;
+      excerpt: string;
+    }[]
+  }
+}
+
 const Feed: React.FC<FeedProps> = ({ postCount, hidePostId }) => {
-  const { allMdx } = useStaticQuery(
+  const { allMdx } = useStaticQuery<QueryResult>(
     graphql`
       query {
         allMdx(sort: { frontmatter: { date: DESC } }) {
@@ -46,6 +60,12 @@ const Feed: React.FC<FeedProps> = ({ postCount, hidePostId }) => {
           </article>
         ))
       }
+      {(renderNodes.length === 0) && (
+        <h4>Nothing here yet!</h4>
+      )}
+      {(hidePostId && renderNodes.length === 1) && (
+        <h4>No other posts yet :(</h4>
+      )}
     </>
   )
 }

@@ -6,4 +6,4 @@ import "./src/milligram.css"
 // custom global styles
 import "./src/main.css"
 // Highlighting for code blocks
-// import "prismjs/themes/prism.css"
+import "prismjs/themes/prism-tomorrow.css"

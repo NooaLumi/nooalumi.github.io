@@ -1,20 +1,44 @@
 ---
 title: Hello World
-date: "2024-05-25"
+date: "2024-05-26"
 description: "Hello World"
 slug: "hello-world"
 ---
 
-# A World of Truths and Lies
+# Obligatory 'Hello World!' post
 
-Around a year ago, I had the idea to put X in Y. Today, I share with you the catastrophic series of events that followed.
+As expected, the moment I got this blog up-and-running I completely forgot what I even wanted to write about in the first place. 
+I'm sure it'll come back to me, but in the meanwhile I might as well tell you about how I set this site up.
 
-#### Beginning of the end
+## The Alright Gatsby
 
-Looking at things from my perspective, I though my idea was kind of brilliant. If we could harness the power of X in Y, we could instantly catapult to a new generation of Z.
+I picked [Gatsby](https://www.gatsbyjs.com/) for its flexibility and familiarity (not with Gatsby itself, but with React and GraphQL). I briefly also considered [Jekyll](https://jekyllrb.com/), but
+then saw that it's built on Ruby. I'm not going to talk shit on something I've never tried, but I don't trust a language who's primary package manager
+calls its packages RubyGems. I thought Rust was being cute with it's Cargo Crates, but this is next level.
 
-It was like a dream come true. 
+I used the **Typescript** starter with some related plugins pre-installed, but no themes or templates. I couldn't find one I liked and assumed it wouldn't take too long
+to slap some styles together. 
 
-You can see more at [Google](https://google.com)
+For CSS, I went with the **milligram** stylesheet which I extended with my own colors and typography stuff. **CSS modules** came pre-installed, so I used those for all
+stand-alone components. They're kind of a pain to use with typescript so I might install a CSS-in-JS library at some point instead.
 
-Until it wasn't... 
+These blog posts use [MDX](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/), which is just markdown with the option to embed JSX down the line if need be.
+
+## Conclusion
+
+Err.. that's about it. It took me some six hours total to set this up, so it definitely delivered on efficiency. I also like the whole `Local files -> GraphQL -> Build-time React props`
+workflow that's going on. Makes things very flexible. 
+
+I guess I'll also try to attach an image at the end here to see if that whole thing works. And maybe some code to check syntax highlighting as well.
+
+
+```typescript
+const sayHello: string = (name: string) => {
+  return `Hello ${name}!`;
+}
+```
+
+<br/>
+If this works, you should see the icon I made for this site blown up below. Fingers crossed!
+
+![A magical orb, the icon of this website](homepage_icon.png)

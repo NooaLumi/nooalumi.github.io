@@ -8,13 +8,13 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
-    <nav className={styles.navigation}>
-      <div className={styles.navigationItems}>
-        <h4>Nooa Lumilaakso</h4>
+    <header className={styles.navigation}>
+      <nav className={styles.navigationItems}>
+        <Link to="/"><p className={styles.heading}>Nooa Lumilaakso</p></Link>
         <Link to="/">About</Link>
         <Link to="/blog">Blog</Link>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <main className={styles.contentContainer}>
       <div className={styles.content}>
         {children}
@@ -22,7 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     </main>
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        Hit me up —> <em><a href="mailto:nooa.lumilaakso@gmail.com">nooa.lumilaakso@gmail.com</a></em>
+        Hit me up —&gt; <em><a href="mailto:nooa.lumilaakso@gmail.com">nooa.lumilaakso@gmail.com</a></em>
       </div>
     </footer>
   </>

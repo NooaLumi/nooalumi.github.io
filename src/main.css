@@ -22,6 +22,8 @@ body {
   font-size: 2em;
   color: var(--color-text);
   margin: 0;
+
+  transition: background-color .33s cubic-bezier(0, 0, 0.58, 1); /* for .hurt -class */
 }
 
 h1 {
