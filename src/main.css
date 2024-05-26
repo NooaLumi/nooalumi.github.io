@@ -105,6 +105,9 @@ a:hover, a:focus {
   }
 }
 
+code[class*="language-"], pre[class*="language-"] {
+  font-size: .95em;
+}
 
 /* --- Extend milligram classes --- */
 
