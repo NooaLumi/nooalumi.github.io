@@ -1,0 +1,11 @@
+.socialIcons {
+  margin: .88rem 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 3rem !important;
+  height: 3rem !important;
+}
