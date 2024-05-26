@@ -27,12 +27,6 @@
   font-family: var(--font-family-heading);
 }
 
-@media screen and (max-width: 576px) {
-  .heading {
-    display: none;
-  }
-}
-
 .navigationItems a {
   padding: 0 2rem;
 }
@@ -49,6 +43,16 @@
   width: 100%;
   margin: 0 24px;
   word-break: break-word;
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    display: none;
+  }
+  .content {
+    margin: 0;
+    padding: 0 24px;
+  }
 }
 
 .footer {
