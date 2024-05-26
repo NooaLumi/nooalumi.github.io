@@ -3,17 +3,18 @@
   cursor: crosshair;
 }
 
-.image {
+/* Need the extra specificity to overwrite gatsby-image-wrapper position:relative in production */
+.imageContainer .image {
   max-width: 200px;
   max-height: 200px;
   min-width: 150px;
   min-height: 150px;
-  position: absolute;
+  position: absolute; 
   top: 0;
   left: 0;
 }
 
-.imageBase {
+.imageContainer .imageBase {
   position: relative;
 }
 

@@ -7,14 +7,14 @@ const Profile: React.FC = () => {
   return (
     <div className={styles.info}>
       <Doomguy/>
-      <p>
+      <div>
         Hello! My name is Nooa, and I do programming and a bunch of other cool stuff. 
         <br/>
         <ul className={styles.socialIcons}>
           <li><SocialIcon className={styles.socialIcon} url="https://www.linkedin.com/in/nooa-lumilaakso-212581243/"/></li>
           <li><SocialIcon className={styles.socialIcon} url="https://github.com/NooaLumi"/></li>
         </ul>
-      </p>
+      </div>
     </div>
   );
 }
