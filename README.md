@@ -9,4 +9,4 @@
 4. (optional) If you're using vscode, you might have to set your typescript version to the workspace version to get rid of some warnings
 
 ## Running in production
-`npm run delpoy`
+`npm run deploy`
