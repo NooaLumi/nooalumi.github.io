@@ -1,8 +1,10 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import type { HeadFC, PageProps } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Profile from "../components/profile"
+import Feed from "../components/feed"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -28,6 +30,10 @@ const IndexPage: React.FC<PageProps> = () => {
         <li><a href="https://commons.wikimedia.org/wiki/File:Dammen_p%C3%A5_Kloumann-sj%C3%B8en_(The_dam_at_Lake_Klouman),_1908.jpg">This painting</a> by Theodor Kittelsen</li>
         <li>TLDR: Cool stuff and the people that make it</li>
       </ul>
+      <br/>
+      <h2><span className="monospace">//</span> Checkout my Blog</h2>
+      <Feed postCount={3} />
+      <Link to="/blog" className="button button-outline button-main">See all posts</Link>
     </Layout>
   )
 }
