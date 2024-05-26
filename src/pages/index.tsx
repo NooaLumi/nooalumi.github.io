@@ -15,7 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <li><a href="https://www.youtube.com/watch?v=ZSRHeXYDLko">This talk</a> by Jonathan Blow on how software degrades over time</li>
         <li><a href="https://www.poetry.com/poem/105446/what-is-the-price-of-experience%3F">This poem</a> by William Blake</li>
         <li><a href="https://www.gog.com/en/game/terraria">Terraria</a> by Re-Logic and <a href="https://www.gog.com/game/Prey">Prey</a> by Arkane Austin (RIP)</li>
-        <li>Maybe a quarter of the reciprocal of ¹⁄₁₆ of my four siblings</li>
+        <li>Maybe a quarter of the reciprocal of 1 ÷ 16 of my four siblings</li>
         <li><a href="https://www.youtube.com/watch?v=4XeeIFsysK4&list=PLgtvGkabBTggcwXCMx7hyeVJ_D0GyNPGw">This album</a> by Thou & Emma Ruth Rundle</li>
         <li><a href="https://www.goodreads.com/book/show/103761.Zen_in_the_Art_of_Writing">This book</a> on writing by Ray Bradbury, and <a href="https://www.goodreads.com/book/show/103758.Zen_in_the_Art_of_Archery">its namesake</a> by Eugen Herrigel</li>
         <li><a href="https://neovim.io/">VIM</a> (suck it, Emacs)</li>
