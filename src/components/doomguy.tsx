@@ -12,6 +12,7 @@ const Doomguy: React.FC = () => {
   // Toggle screen red when isHurt
   useEffect(() => {
     document.body.classList[isHurt ? "add" : "remove"](styles.hurt);
+    return () => document.body.classList.remove(styles.hurt);
   }, [isHurt]);
 
   // Switch image at intervals and clear isHurt
