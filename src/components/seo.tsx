@@ -15,7 +15,7 @@ interface SeoProps {
 
 const Seo: React.FC<SeoProps> = ({ description, title, children }) => {
   return (
-    <>
+    <html lang="en">
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
@@ -24,8 +24,9 @@ const Seo: React.FC<SeoProps> = ({ description, title, children }) => {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <link rel="icon" type="image/png" href="favicon.ico" />
       {children}
-    </>
+    </html>
   )
 }
 
