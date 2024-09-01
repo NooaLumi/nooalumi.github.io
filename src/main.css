@@ -2,8 +2,9 @@
   --color-text: #242424;
   --font-family-base: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
   --font-family-heading: 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  --color-main: #CB04A5;
+  --color-main: #cb04a5;
   --color-secondary: #F433AB;
+  --color-tetriary: #40826d;
   --content-max-width: 680px;
   --milligram-gray: #606c76; /* The gray used by milligram for hover styles and such */
 
@@ -127,6 +128,7 @@ code[class*="language-"], pre[class*="language-"] {
 /* --- Custom utility classes --- */
 .monospace {
   font-family: monospace;
+  color: var(--color-tetriary);
 }
 
 .text-minor {
@@ -134,4 +136,9 @@ code[class*="language-"], pre[class*="language-"] {
   font-style: italic;
   color: var(--milligram-gray);
   margin-bottom: .5rem;
+}
+
+.list-fun ::marker {
+  content: "λ  ";
+  color: var(--color-tetriary);
 }

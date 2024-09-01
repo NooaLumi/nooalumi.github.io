@@ -11,8 +11,8 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout>
       <Profile/>
       <h2><span className="monospace">//</span> Things I Like</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=ZSRHeXYDLko">This talk</a> by Jonathan Blow on how software degrades over time</li>
+      <ul className="list-fun">
+        {/* <li><a href="https://www.youtube.com/watch?v=ZSRHeXYDLko">This talk</a> by Jonathan Blow on how software degrades over time</li> */}
         <li><a href="https://www.poetry.com/poem/105446/what-is-the-price-of-experience%3F">This poem</a> by William Blake</li>
         <li><a href="https://www.gog.com/en/game/terraria">Terraria</a> by Re-Logic and <a href="https://www.gog.com/game/Prey">Prey</a> by Arkane Austin (RIP)</li>
         <li>Maybe a quarter of the reciprocal of 1 ÷ 16 of my four siblings</li>
