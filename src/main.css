@@ -1,19 +1,21 @@
 :root {
-  --color-text: #242424;
+  --color-text: #D0D0D0;
   --font-family-base: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
   --font-family-heading: 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  --color-main: #cb04a5;
-  --color-secondary: #F433AB;
-  --color-tetriary: #40826d;
+  --color-main: rgb(128, 128, 192);
+  --color-secondary: red;
+  --color-tetriary: red;
   --content-max-width: 680px;
   --milligram-gray: #606c76; /* The gray used by milligram for hover styles and such */
 
-  /* --screenw-xs: 0;
+  /*
+  --screenw-xs: 0;
   --screenw-sm: 576px;
   --screenw-md: 768px;
   --screenw-lg: 992px;
   --screenw-xl: 1200px;
-  --screenw-xxl: 1400px; */
+  --screenw-xxl: 1400px;
+  */
 }
 
 /* --- Adjust milligram defaults --- **/
@@ -25,6 +27,12 @@ body {
   margin: 0;
 
   transition: background-color .33s cubic-bezier(0, 0, 0.58, 1); /* for .hurt -class */
+  background-color: black;
+}
+
+/* gatsby-remark-autolink-headers */
+a.anchor {
+  fill: var(--color-main);
 }
 
 h1 {
@@ -141,4 +149,41 @@ code[class*="language-"], pre[class*="language-"] {
 .list-fun ::marker {
   content: "λ  ";
   color: var(--color-tetriary);
+}
+
+.center-image-vertical {
+  display: grid;
+  place-items: center;
+}
+
+.max-height {
+  height: 100%;
+}
+
+/* Only show for screen readers */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: rect(0 0 0 0);
+	overflow-wrap: normal;
+	border: 0;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.fire-icon {
+  display: inline-block; 
+  transform-origin: center; 
+  animation: tilt .5s infinite ease-in-out alternate;
+  user-select: none;
 }

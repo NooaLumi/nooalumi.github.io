@@ -1,0 +1,72 @@
+.fullname_image {
+  aspect-ratio: 192/12;
+  min-width: 30rem;
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  image-rendering: pixelated;
+}
+.fullname_image_container {
+  font-weight: normal;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1em;
+  font-family: var(--font-family-heading);
+}
+
+@media screen and (max-width: 576px) {
+  .fullname_image_container {
+    display: none;
+  }
+}
+
+.about_image {
+  aspect-ratio: 70/12;
+  width: 9rem;
+  max-width: 50rem;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.blog_image {
+  aspect-ratio: 54/12;
+  width: 6.9rem;
+  max-width: 50rem;
+  height: auto;
+  image-rendering: pixelated;
+}
+.otherrecentposts_image {
+  aspect-ratio: 230/12;
+  width: 100%;
+  max-width: 51rem;
+  height: auto;
+  image-rendering: pixelated;
+  margin: 1rem 0 2rem 0;
+}
+.readmystuff_image {
+  aspect-ratio: 161/12;
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  image-rendering: pixelated;
+  margin-bottom: 2rem;
+}
+
+.checkoutmyblog_image {
+  aspect-ratio: 207/12;
+  width: 100%;
+  max-width: 45rem;
+  height: auto;
+  image-rendering: pixelated;
+  margin-bottom: 2rem;
+}
+
+.thingsilike_image {
+  aspect-ratio: 143/12;
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  image-rendering: pixelated;
+  margin-bottom: 2rem;
+}

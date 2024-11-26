@@ -18,15 +18,6 @@
   justify-content: flex-end;
 }
 
-.heading {
-  font-weight: normal;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.1em;
-  font-family: var(--font-family-heading);
-}
-
 .navigationItems a {
   padding: 0 2rem;
 }
@@ -46,12 +37,18 @@
 }
 
 @media screen and (max-width: 576px) {
-  .heading {
-    display: none;
-  }
   .content {
     margin: 0;
     padding: 0 24px;
+  }
+}
+
+@keyframes moveTiles {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50rem 50rem;
   }
 }
 
@@ -59,8 +56,12 @@
   margin-top: 4rem;
   display: flex;
   justify-content: center;
-  background-color: var(--milligram-gray);
+  background-image: url('../images/lavatile.png');
+  background-size: 50rem;
+  image-rendering: pixelated;
+  background-repeat: repeat;
   height: var(--footer-height);
+  animation: moveTiles 15s linear infinite;
 }
 
 .footerContent {
@@ -72,10 +73,15 @@
   color: white;
 }
 
+.footerText {
+  background-color: var(--color-main);
+  padding: 0 2rem;
+}
+
 .footerContent a {
   color: white;
 }
 
 .footerContent a:hover {
-  color: var(--color-secondary);
+  color: black;
 }

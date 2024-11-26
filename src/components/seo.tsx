@@ -1,32 +1,58 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 interface SeoProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
+  pathname?: string;
   children?: React.ReactNode;
 }
 
-const Seo: React.FC<SeoProps> = ({ description, title, children }) => {
+const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
+  const { title: defaultTitle, description: defaultDescription, siteUrl } = useSiteMetadata()
+
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    url: `${siteUrl}${pathname || ``}`
+  }
+
   return (
-    <html lang="en">
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+    <>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <link rel="icon" type="image/png" href="favicon.ico" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:url" content={seo.url} />
+      <link rel="icon" type="image/x-icon" href="favicon.ico" />
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "url": "https://nooalumi.github.io",
+            "description": "A 22-year-old Full-Stack Web Developer with a passion for technology and creative problem-solving."
+            "name": "Nooa Lumilaakso",
+            "givenName": "Nooa",
+            "jobTitle": "Full-Stack Web Developer",
+            "sameAs": [
+              "https://www.linkedin.com/in/nooa-lumilaakso-212581243/"
+            ],
+            "knowsLanguage": [
+              "English",
+              "Finnish"
+            ],
+            "email": "nooa.lumilaakso@gmail.com",
+            "gender": "Male",
+          }
+        `}
+      </script>
       {children}
-    </html>
+    </>
   )
 }
 

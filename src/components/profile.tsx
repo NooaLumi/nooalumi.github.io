@@ -8,7 +8,7 @@ const Profile: React.FC = () => {
     <div className={styles.info}>
       <Doomguy/>
       <div>
-        Hello! My name is Nooa, and I do programming and a bunch of other cool stuff. 
+        Hello! My name is Nooa, and I do programming and a bunch of other cool stuff <span className="fire-icon">🔥</span>
         <br/>
         <Socials/>
       </div>
