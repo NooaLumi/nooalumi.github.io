@@ -35,7 +35,7 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
             "@context": "https://schema.org",
             "@type": "Person",
             "url": "https://nooalumi.github.io",
-            "description": "A 22-year-old Full-Stack Web Developer with a passion for technology and creative problem-solving."
+            "description": "A 22-year-old Full-Stack Web Developer with a passion for technology and creative problem-solving.",
             "name": "Nooa Lumilaakso",
             "givenName": "Nooa",
             "jobTitle": "Full-Stack Web Developer",
@@ -47,7 +47,7 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
               "Finnish"
             ],
             "email": "nooa.lumilaakso@gmail.com",
-            "gender": "Male",
+            "gender": "Male"
           }
         `}
       </script>
