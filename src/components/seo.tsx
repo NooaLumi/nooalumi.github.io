@@ -25,14 +25,14 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
       <meta property="og:description" content={seo.description} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_FI" />
-      { pathname === undefined && (
+      {/* { pathname === undefined && (
         <>
           <meta property="og:image" content={`${siteUrl}/threat.png`} />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="1137" />
           <meta property="og:image:height" content="1137" />
         </>
-      )}
+      )} */}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
