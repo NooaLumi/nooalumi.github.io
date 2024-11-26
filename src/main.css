@@ -187,3 +187,7 @@ code[class*="language-"], pre[class*="language-"] {
   animation: tilt .5s infinite ease-in-out alternate;
   user-select: none;
 }
+
+.no-wrap-text {
+  white-space: nowrap;
+}
