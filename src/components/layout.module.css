@@ -12,14 +12,22 @@
   position: relative;
   max-width: var(--content-max-width);
   width: 100%;
-  margin: 0 24px;
+  margin: 0 1.5rem;
 
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 576px) {
+  .navigation {
+    padding: 2rem .5rem;
+  }
+  .navigationItems {
+    padding: 0 .5rem;
+  }
+}
 
 .navigationItems a {
-  padding: 0 2rem;
+  padding: 0 0 0 3rem;
 }
 
 .contentContainer {
