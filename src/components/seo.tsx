@@ -28,7 +28,7 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:url" content={seo.url} />
-      <link rel="icon" type="image/x-icon" href="favicon.ico" />
+      <link rel="icon" type="image/x-icon" href={`${siteUrl}/favicon.ico`} />
       <script type="application/ld+json">
         {`
           {
