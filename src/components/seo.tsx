@@ -25,6 +25,7 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
       <meta property="og:description" content={seo.description} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_FI" />
+      <meta name="google-site-verification" content="xUcUZTKNJE05sOB3nDI6HRucWFe3TY-cBmKRnPWZNKs" />
       {/* { pathname === undefined && (
         <>
           <meta property="og:image" content={`${siteUrl}/threat.png`} />
