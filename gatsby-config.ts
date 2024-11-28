@@ -20,7 +20,7 @@ const config: GatsbyConfig = {
       options: {
         host: 'https://nooalumi.github.io',
         sitemap: 'https://nooalumi.github.io/sitemap-index.xml',
-        policy: [{userAgent: '*', allow: '/'}]
+        policy: [{userAgent: '*', disallow: '/images/nocrawl/'}]
       }
     },
     {

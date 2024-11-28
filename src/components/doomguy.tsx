@@ -30,22 +30,22 @@ const Doomguy: React.FC = () => {
       <StaticImage
       className={`${styles.image} ${styles.imageBase} ${imageIndex > 1 ? ' ' + styles.imageHidden : ''}`}
       alt="Male face looking forwards"
-      src="../images/face_forwards.png"
+      src="../images/nocrawl/face_forwards.png"
       />
       <StaticImage
       className={`${styles.image} ${imageIndex !== 2 ? ' ' + styles.imageHidden : ''}`}
       alt="Male face looking left"
-      src="../images/face_left.png"
+      src="../images/nocrawl/face_left.png"
       />
       <StaticImage
       className={`${styles.image} ${imageIndex !== 3 ? ' ' + styles.imageHidden : ''}`}
       alt="Male face looking right"
-      src="../images/face_right.png"
+      src="../images/nocrawl/face_right.png"
       />
       <StaticImage
       className={`${styles.image} ${isHurt === false ? ' ' + styles.imageHidden : ''}`}
       alt="Male face looking angry"
-      src="../images/face_hurt.png"
+      src="../images/nocrawl/face_hurt.png"
       />
     </div>
   );

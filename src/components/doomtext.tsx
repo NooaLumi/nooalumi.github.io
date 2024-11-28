@@ -28,7 +28,7 @@ const DoomText: React.FC<DoomTextProps> = ({ doomText }) => {
             transformOptions={{fit: "contain"}}
             className={styles.about_image}
             alt="About"
-            src="../images/ABOUT.png"
+            src="../images/nocrawl/ABOUT.png"
           />
         </div>
       );
@@ -41,7 +41,7 @@ const DoomText: React.FC<DoomTextProps> = ({ doomText }) => {
             transformOptions={{fit: "contain"}}
             className={styles.blog_image}
             alt="Blog"
-            src="../images/BLOG.png"
+            src="../images/nocrawl/BLOG.png"
           />
         </div>
       );
@@ -54,7 +54,7 @@ const DoomText: React.FC<DoomTextProps> = ({ doomText }) => {
             transformOptions={{fit: "contain"}}
             className={styles.fullname_image}
             alt="Nooa Lumilaakso"
-            src="../images/NOOA_LUMILAAKSO.png"
+            src="../images/nocrawl/NOOA_LUMILAAKSO.png"
           />
         </div>
       );
@@ -68,7 +68,7 @@ const DoomText: React.FC<DoomTextProps> = ({ doomText }) => {
             transformOptions={{fit: "contain"}}
             className={styles.checkoutmyblog_image}
             alt="Checkout My Blog!"
-            src="../images/CHECKOUT_MY_BLOG.png"
+            src="../images/nocrawl/CHECKOUT_MY_BLOG.png"
             aria-hidden={true}
           />
         </h2>
@@ -83,7 +83,7 @@ const DoomText: React.FC<DoomTextProps> = ({ doomText }) => {
             transformOptions={{fit: "contain"}}
             className={styles.otherrecentposts_image}
             alt="Other recent posts!"
-            src="../images/OTHER_RECENT_POSTS.png"
+            src="../images/nocrawl/OTHER_RECENT_POSTS.png"
             aria-hidden={true}
           />
         </h2>
@@ -98,7 +98,7 @@ const DoomText: React.FC<DoomTextProps> = ({ doomText }) => {
             transformOptions={{fit: "contain"}}
             className={styles.readmystuff_image}
             alt="Read My Stuff!"
-            src="../images/READ_MY_STUFF.png"
+            src="../images/nocrawl/READ_MY_STUFF.png"
             aria-hidden={true}
           />
         </h1>
@@ -113,7 +113,7 @@ const DoomText: React.FC<DoomTextProps> = ({ doomText }) => {
             transformOptions={{fit: "contain"}}
             className={styles.thingsilike_image}
             alt="Things I Like!"
-            src="../images/THINGS_I_LIKE.png"
+            src="../images/nocrawl/THINGS_I_LIKE.png"
             aria-hidden={true}
           />
         </h2>
