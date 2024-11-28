@@ -34,6 +34,11 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
           <meta property="og:image:height" content="1342" />
         </>
       )}
+      { pathname?.startsWith('/blog') && (
+        <>
+          <meta name="author" content="Nooa Lumilaakso"></meta>
+        </>
+      )}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
