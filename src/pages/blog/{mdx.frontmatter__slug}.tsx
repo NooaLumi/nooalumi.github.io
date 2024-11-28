@@ -12,6 +12,7 @@ interface DataProps {
       title: string;
       date: string;
       slug: string;
+      description: string;
     }
     excerpt: string;
     id: string;
@@ -36,6 +37,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
+        description
         slug
       }
       excerpt
@@ -44,6 +46,6 @@ export const query = graphql`
   }
 `
 
-export const Head: HeadFC<DataProps> = ({ data }) => <Seo title={`${data.mdx.frontmatter.title} | Nooa's Blog`} description={data.mdx.excerpt} pathname={`/blog/${data.mdx.frontmatter.slug}`} />
+export const Head: HeadFC<DataProps> = ({ data }) => <Seo title={`${data.mdx.frontmatter.title} | Nooa's Blog`} description={data.mdx.frontmatter.description} pathname={`/blog/${data.mdx.frontmatter.slug}`} />
 
 export default IndexPage

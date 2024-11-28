@@ -13,6 +13,7 @@ interface QueryResult {
       frontmatter: {
         date: string;
         title: string;
+        description: string;
         slug: string;
       }
       id: string;
@@ -30,6 +31,7 @@ const Feed: React.FC<FeedProps> = ({ postCount, hidePostId }) => {
             frontmatter {
               date(formatString: "MMMM D, YYYY")
               title
+              description
               slug
             }
             id
@@ -55,7 +57,7 @@ const Feed: React.FC<FeedProps> = ({ postCount, hidePostId }) => {
                 {node.frontmatter.title}
               </Link>
             </h3>
-            <p className={styles.excerptText}>{node.excerpt}</p>
+            <p className={styles.excerptText}>{node.excerpt || node.frontmatter.description}</p>
             <p className={styles.postDate}>{node.frontmatter.date}</p>
           </article>
         ))
