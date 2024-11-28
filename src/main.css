@@ -191,3 +191,18 @@ code[class*="language-"], pre[class*="language-"] {
 .no-wrap-text {
   white-space: nowrap;
 }
+
+.poem {
+  font-family: Times, Times New Roman, serif;
+  font-size: 1em;
+}
+
+.poem__indent-1::before {
+  content: '\00a0\00a0\00a0\00a0';
+  display: inline-block;
+}
+
+.poem__indent-2::before {
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+  display: inline-block;
+}
