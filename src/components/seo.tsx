@@ -4,11 +4,12 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 interface SeoProps {
   title?: string;
   description?: string;
+  publishedDate?: string;
   pathname?: string;
   children?: React.ReactNode;
 }
 
-const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
+const Seo: React.FC<SeoProps> = ({title, description, pathname, children, publishedDate}) => {
   const { title: defaultTitle, description: defaultDescription, siteUrl } = useSiteMetadata()
 
   const seo = {
@@ -23,7 +24,6 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
       <meta name="description" content={seo.description} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
-      <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_FI" />
       <meta name="google-site-verification" content="xUcUZTKNJE05sOB3nDI6HRucWFe3TY-cBmKRnPWZNKs" />
       { pathname === undefined && (
@@ -34,10 +34,16 @@ const Seo: React.FC<SeoProps> = ({title, description, pathname, children}) => {
           <meta property="og:image:height" content="1342" />
         </>
       )}
-      { pathname?.startsWith('/blog') && (
+      { pathname?.startsWith('/blog') && pathname?.length > 6 ? (
         <>
-          <meta name="author" content="Nooa Lumilaakso"></meta>
+          <meta property="og:type" content="article" />
+          <meta name="author" content="Nooa Lumilaakso" />
+          <meta property="article:author" content="Nooa Lumilaakso" />
+          { publishedDate !== undefined && (<meta property="article:published_time" content={publishedDate} />) }
+          <meta property="headline" content={seo.title} />
         </>
+      ) : (
+          <meta property="og:type" content="website" />
       )}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={seo.title} />
