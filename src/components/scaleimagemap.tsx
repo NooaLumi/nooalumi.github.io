@@ -5,13 +5,18 @@ const ScaleImageMap: React.FC<React.PropsWithChildren> = ({ children }) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const mapRef = useRef<HTMLMapElement | null>(null);
   const [isClient, setIsClient] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient || !isImageLoaded) return;
 
     const img = imgRef.current;
     const map = mapRef.current;
@@ -50,7 +55,7 @@ const ScaleImageMap: React.FC<React.PropsWithChildren> = ({ children }) => {
     return () => {
       window.removeEventListener("resize", scaleImageMap);
     };
-  }, [isClient]);
+  }, [isClient, isImageLoaded]);
 
   if (!isClient) return null;
 
@@ -59,7 +64,7 @@ const ScaleImageMap: React.FC<React.PropsWithChildren> = ({ children }) => {
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           if (child.type === "img") {
-            return React.cloneElement(child, { ref: imgRef } as React.RefAttributes<HTMLImageElement>);
+            return React.cloneElement(child, { ref: imgRef, onLoad: handleImageLoad } as React.RefAttributes<HTMLImageElement>);
           } else if (child?.type === "map") {
             return React.cloneElement(child, { ref: mapRef } as React.RefAttributes<HTMLMapElement>);
           }
