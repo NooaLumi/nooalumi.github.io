@@ -1,11 +1,18 @@
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ScaleImageMap: React.FC<React.PropsWithChildren> = ({ children }) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const mapRef = useRef<HTMLMapElement | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     const img = imgRef.current;
     const map = mapRef.current;
     if (!img || !map) return;
@@ -43,7 +50,9 @@ const ScaleImageMap: React.FC<React.PropsWithChildren> = ({ children }) => {
     return () => {
       window.removeEventListener("resize", scaleImageMap);
     };
-  }, []);
+  }, [isClient]);
+
+  if (!isClient) return null;
 
   return (
     <>
