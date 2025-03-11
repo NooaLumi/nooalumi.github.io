@@ -4,6 +4,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import Seo from "../../components/seo"
 import Layout from "../../components/layout"
 import Feed from "../../components/feed"
+import ProfileBlurb from "../../components/profileblurb"
 import DoomText, {DoomTextOption} from "../../components/doomtext"
 
 interface DataProps {
@@ -23,6 +24,7 @@ interface DataProps {
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data, children }) => {
   return (
     <Layout>
+      <ProfileBlurb/>
       <p className="text-minor">Posted on {data.mdx.frontmatter.date}</p>
       {children}
       <br/><hr/>

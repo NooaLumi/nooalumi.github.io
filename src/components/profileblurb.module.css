@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: .5rem;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.image {
+  margin-right: 3rem;
+}
+
+.name {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.text {
+  font-size: 0.9em;
+  margin-bottom: .5rem;
+}
+
+.socialscontainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .socialscontainer{
+    margin-top: .5rem;
+    flex-direction: row;
+  }
+}
+
+.socials {
+  margin: 0;
+}
