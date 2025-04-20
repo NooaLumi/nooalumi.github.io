@@ -15,17 +15,18 @@ const IndexPage: React.FC<PageProps> = () => {
       <ul className="list-fun">
         {/* <li><a href="https://www.youtube.com/watch?v=ZSRHeXYDLko">This talk</a> by Jonathan Blow on how software degrades over time</li> */}
         <li><a href="/blog/favorite-albums-2025/" title="My Favorite Albums!">These albums</a> and <a href="/blog/favorite-games-2025/" title="My Favorite Games!">these games</a></li>
+        <li>Maybe a quarter of the reciprocal of <code className="language-text">(1 ÷ 16)</code> of my four siblings</li>
         <li><a href="https://www.poetry.com/poem/105446/what-is-the-price-of-experience%3F" title="What is the Price of Experience? by William Blake">This poem</a> by William Blake</li>
-        <li>Maybe a quarter of the reciprocal of 1 ÷ 16 of my four siblings</li>
-        <li><a href="https://www.goodreads.com/book/show/103761.Zen_in_the_Art_of_Writing" title="Goodreads - Zen in the Art of Writing by Ray Bradbury">This book</a> on writing by Ray Bradbury, and <a href="https://www.goodreads.com/book/show/103758.Zen_in_the_Art_of_Archery" title="Goodreads - Zen in the Art of Archery by Eugen Herrigel">its namesake</a> by Eugen Herrigel</li>
         <li><a href="https://neovim.io/" title="Neovim">VIM</a> (suck it, Emacs)</li>
         <li>The only <a href="https://www.amazon.com/Kindle-Paperwhite-10th-Gen-Built/dp/B09BW9Y2L2" title="Amazon - Kindle Paperwhite 10th Gen">perfect piece of hardware</a> in existence (the software sucks)</li>
-        <li><a href="https://www.goodreads.com/book/show/23754.The_Sandman_Vol_1" title="Goodreads - The Sandman VOl 1 by Neil Gaiman">This comic book series</a> by Neil Gaiman et al.</li>
+        {/* <li><a href="https://www.goodreads.com/book/show/23754.The_Sandman_Vol_1" title="Goodreads - The Sandman VOl 1 by Neil Gaiman">This comic book series</a> by Neil Gaiman et al.</li> */}
         {/* <li>The <a href="https://youtu.be/LuKGGz-0Q7s">opening theme</a> of Space Dandy</li> */}
         {/* <li>Amateur Calisthenics so I can say I exercise</li> */}
-        <li><a href="https://www.codedojo.com/?p=1620" title="Two guys made an MMO: The Growtopia Postmortem by Seth A. Robinson">This article</a> by Seth A. Robinson about how he and Mike Hommel made a mobile MMO game back in 2012</li>
+        {/* <li><a href="https://www.codedojo.com/?p=1620" title="Two guys made an MMO: The Growtopia Postmortem by Seth A. Robinson">This article</a> by Seth A. Robinson about how he and Mike Hommel made a mobile MMO game back in 2012</li> */}
         <li><a href="https://www.youtube.com/watch?v=gBu77h2FSCM" title="Youtube - RetroAhoy: X-COM by Ahoy">This video</a> by Ahoy about the X-COM fanchise</li>
-        <li><a href="https://www.youtube.com/watch?v=yuxss1kBQWw" title="Youtube - Private Life by Oingo Boingo">This music video</a> by Oingo Boingo</li>
+        <li><a href="https://www.goodreads.com/book/show/103761.Zen_in_the_Art_of_Writing" title="Goodreads - Zen in the Art of Writing by Ray Bradbury">This book</a> on writing by Ray Bradbury, and <a href="https://www.goodreads.com/book/show/103758.Zen_in_the_Art_of_Archery" title="Goodreads - Zen in the Art of Archery by Eugen Herrigel">its namesake</a> by Eugen Herrigel</li>
+        {/* <li><a href="https://www.youtube.com/watch?v=yuxss1kBQWw" title="Youtube - Private Life by Oingo Boingo">This music video</a> by Oingo Boingo</li> */}
+        <li><a href="https://boardgamegeek.com/boardgame/227456/escape-the-dark-castle">This board game</a> by Themeborne</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Dammen_p%C3%A5_Kloumann-sj%C3%B8en_(The_dam_at_Lake_Klouman),_1908.jpg" title="Wikipedia Commons - Dammen på Kloumann-sjøen by Theodor Kittelsen">This painting</a> by Theodor Kittelsen</li>
         <li>TLDR: Cool stuff and the people that make it</li>
       </ul>
