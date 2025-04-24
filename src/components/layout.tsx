@@ -12,9 +12,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
     <header className={styles.navigation}>
       <nav className={styles.navigationItems}>
-        <Link to="/" title="Home">
+        {/* <Link to="/" title="Home">
           <DoomText doomText={DoomTextOption.FullName}/>
-        </Link>
+        </Link> */}
         <Link to="/" title="About">
           <div className="center-image-vertical max-height">
             <DoomText doomText={DoomTextOption.About}/>
