@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
         {/* <li><a href="https://www.youtube.com/watch?v=ZSRHeXYDLko">This talk</a> by Jonathan Blow on how software degrades over time</li> */}
         <li><a href="/blog/favorite-albums-2025/" title="My Favorite Albums!">These albums</a> and <a href="/blog/favorite-games-2025/" title="My Favorite Games!">these games</a></li>
         <li>Maybe a quarter of the reciprocal of <code className="language-text">(1 ÷ 16)</code> of my four siblings</li>
-        <li><a href="https://www.poetry.com/poem/105446/what-is-the-price-of-experience%3F" title="What is the Price of Experience? by William Blake">This poem</a> by William Blake</li>
+        <li><a href="https://www.poetry.com/poem/105446/what-is-the-price-of-experience" title="What is the Price of Experience? by William Blake">This poem</a> by William Blake</li>
         <li><a href="https://neovim.io/" title="Neovim">VIM</a> (suck it, Emacs)</li>
         <li>The only <a href="https://www.amazon.com/Kindle-Paperwhite-10th-Gen-Built/dp/B09BW9Y2L2" title="Amazon - Kindle Paperwhite 10th Gen">perfect piece of hardware</a> in existence (the software sucks)</li>
         {/* <li><a href="https://www.goodreads.com/book/show/23754.The_Sandman_Vol_1" title="Goodreads - The Sandman VOl 1 by Neil Gaiman">This comic book series</a> by Neil Gaiman et al.</li> */}
