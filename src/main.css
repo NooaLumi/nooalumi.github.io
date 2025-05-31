@@ -1,5 +1,6 @@
 :root {
   --color-text: #E0E0E0;
+--color-text-subdued: #D0D0D0;
   --font-family-base: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
   --font-family-heading: 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   --color-main: rgb(128, 128, 192);
@@ -205,4 +206,19 @@ code[class*="language-"], pre[class*="language-"] {
 .poem__indent-2::before {
   content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
   display: inline-block;
+}
+
+.cursive {
+  font-style: italic;
+  color: var(--color-text-subdued);
+}
+
+.cursive p:first-child {
+  border-top: white dashed .1rem;
+  padding-top: 2rem;
+}
+
+.cursive p:last-child {
+  border-bottom: white dashed .1rem;
+  padding-bottom: 2rem;
 }
